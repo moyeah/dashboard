@@ -1,0 +1,10 @@
+<li>
+  <%= link_to project.name, project %><br />
+  <span class="description">
+  <% if !project.description.blank? %>
+    <%= truncate(strip_tags(project.description), length: 50) %>
+  <% else %>
+    <em>No description available</em>
+  <% end %>
+  </span>
+</li>

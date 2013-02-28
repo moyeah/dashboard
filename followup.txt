@@ -1,2 +1,0 @@
-http://ruby.railstutorial.org/chapters/filling-in-the-layout#top
-6

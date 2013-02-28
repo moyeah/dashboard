@@ -1,0 +1,11 @@
+<% provide(:title, 'New unit') %>
+<h1><%= @project.name %> | New unit</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for [:project, @unit] do |f| %>
+      <%= render 'fields', f: f %>
+      <%= f.submit "Create unit", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

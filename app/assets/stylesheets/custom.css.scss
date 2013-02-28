@@ -168,24 +168,9 @@ input {
   @extend .error;
 }
 
-/* users index */
+/* users, projects and units index */
 
-.users {
-  list-style: none;
-  margin: 0;
-  li {
-    overflow: auto;
-    padding: 10px 0;
-    border-top: 1px solid $grayLighter;
-    &:last-child {
-      border-bottom: 1px solid $grayLighter;
-    }
-  }
-}
-
-/* projects */
-
-.projects {
+.users, .projects, .units {
   list-style: none;
   margin: 0;
   li {
@@ -199,6 +184,6 @@ input {
 }
 
 .description {
+  padding-left: 10px;
   color: $grayLight;
 }
-

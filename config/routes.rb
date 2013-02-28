@@ -1,9 +1,9 @@
 Dashboard::Application.routes.draw do
-  get "projects/new"
-
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
-  resources :projects
+  resources :projects do
+    resources :units, only: [:new, :create]
+  end
 
   root to: 'static_pages#home'
 

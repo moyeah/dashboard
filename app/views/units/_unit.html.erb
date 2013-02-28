@@ -1,0 +1,10 @@
+<li>
+  <%= unit.name %>
+  <span class="description">
+  <% if !unit.description.blank? %>
+    <%= truncate(strip_tags(unit.description), length: 50) %>
+  <% else %>
+    <em>No description available</em>
+  <% end %>
+  </span>
+</li>

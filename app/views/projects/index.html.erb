@@ -1,4 +1,7 @@
-<% provide(:title, 'All projects') %>
+<% provide(:title, 'Projects list') %>
 <h1>Projects list (<%= @projects.count %>)</h1>
 
-<%= render @projects %>
+<ul class="projects">
+  <%= render @projects %>
+</ul>
+

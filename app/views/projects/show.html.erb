@@ -3,6 +3,22 @@
   <aside class="span4">
     <section>
       <h1><%= @project.name %></h1>
-    </session>
+      <span class="description">
+      <% if !@project.description.blank? %>
+        <%= @project.description %>
+      <% else %>
+        <em>No description available</em></span>
+      <% end %>
+      </span>
+    </section>
+    <%= link_to "New unit", new_project_unit_path(@project), class: "btn btn-link" %>
   </aside>
+  <div class="span8">
+    <% if @project.units.any? %>
+      <h3>Units (<%= @project.units.count %>)</h3>
+      <ul class="units">
+        <%= render @units %>
+      </ul>
+    <% end %>
+  </div>
 </div>
